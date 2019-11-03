@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
+        <activity android:label="测试添加项" android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

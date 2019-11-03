@@ -12,6 +12,11 @@ class DisplayMessageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_display_message)
         val message=intent.getStringExtra(ITEM_CLASS)
         Log.e("进入下个页面",message)
-        val textView=findViewById<TextView>(R.id.textView2).apply { text=message }
+        findViewById<TextView>(R.id.textView2).apply { text=message }
     }
+
+//    override fun onPause() {
+//        super.onPause()
+////        overridePendingTransition( R.anim.slide_in_left,R.anim.slide_out_right)
+//    }
 }

@@ -50,5 +50,7 @@ class MainActivity : AppCompatActivity() {
         val intent=Intent(this,DisplayMessageActivity::class.java).apply { putExtra(ITEM_CLASS,inputText) }
         startActivity(intent)
         Log.e("add",inputText)
+//        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+//        finish()
     }
 }

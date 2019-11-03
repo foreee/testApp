@@ -1,5 +1,6 @@
 package com.app.cx.testapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -8,11 +9,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
-import android.widget.TextView
 
 import kotlinx.android.synthetic.main.activity_main.*
 
-const val ITEM_CLASS= "com.app.cx.item"
+const val ITEM_CLASS= "com.app.cx.testapp.item"
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +45,10 @@ class MainActivity : AppCompatActivity() {
     /***点击添加按键执行**/
     fun addItm(view: View) {
         //
-        val addText=findViewById<TextView>(R.id.textView)
+        val addText=findViewById<EditText>(R.id.editText)
         val inputText=addText.text.toString()
+        val intent=Intent(this,DisplayMessageActivity::class.java).apply { putExtra(ITEM_CLASS,inputText) }
+        startActivity(intent)
         Log.e("add",inputText)
     }
 }
